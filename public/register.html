@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" ng-app = "getUser">
+  <head>
+    <meta charset="utf-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav>
+      <span><a href="/">Home</a></span>
+      <span><a href="register.html">Register</a></span>
+      <span><a href="profile.html">Profile</a></span>
+    </nav>
+    <h1 style="text-align: center;">Welcome!</h1>
+    <div class="container" ng-controller="userCtrl">
+      <h4>Register here</h4>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Full Name:</th>
+            <th>Date of birth:</th>
+            <th>Photo:</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input class="form-control" ng-model = "contact.name"/></td>
+            <td><input class="form-control" ng-model = "contact.date"/></td>
+            <td><input class="form-control" ng-model = "contact.photo"/></td>
+            <td><button class="btn btn-primary" ng-click="addContact()">Register</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
+    <script src="controllers/controller.js"></script>
+  </body>
+</html>
